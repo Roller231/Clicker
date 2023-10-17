@@ -53,6 +53,8 @@ public class GirlBuyScript : MonoBehaviour
             locked = false;
             gameManager.money -= cost;
             canBuying = false;
+            gameManager.MySave();
+
         }
     }
 

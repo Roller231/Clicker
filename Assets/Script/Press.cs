@@ -8,6 +8,8 @@ public class Press : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private GameObject particle;
 
+    [SerializeField] private Transform transformToSpawnParticle;
+
     [SerializeField] private Button buttonBoostClick;
     [SerializeField] private Button buttonBoostAutoClick;
 
@@ -24,13 +26,15 @@ public class Press : MonoBehaviour
 
         if (!shopOpened)
         {
-            var value = Instantiate(particle, new Vector3(-2.16f, -0.77f, 81.38f), Quaternion.identity);
+            var value = Instantiate(particle, new Vector3(transformToSpawnParticle.position.x, transformToSpawnParticle.position.y, 81.38f), Quaternion.identity);
             value.GetComponent<ParticleSystem>().Play();
             Destroy(value, 3f);
         }
 
 
         GetComponent<AudioSource>().Play();
+
+        gameManager.MySave();
     }
 
     public void OnPressAutoClick()
@@ -48,6 +52,9 @@ public class Press : MonoBehaviour
             }
 
             GetComponent<AudioSource>().Play();
+
+            gameManager.MySave();
+
         }
 
     }

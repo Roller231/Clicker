@@ -1,2 +1,2 @@
 Build path: E:/AnimeCK
-Build number: 29
+Build number: 36
