@@ -1,13 +1,15 @@
 {
-    "idSave": 48,
+    "idSave": 68,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
-    "money": 654653654,
+    "money": 654653661,
     "upgradeClickCost": 10,
     "upgradeAutoClickCost": 30,
+    "countPlusMoney": 1,
+    "autoClick": 0,
     "girlBuyScripts": [
-        true,
+        false,
         false,
         false,
         true,
@@ -20,7 +22,7 @@
         true
     ],
     "foneBuyScripts": [
-        true,
+        false,
         false,
         true,
         true,
